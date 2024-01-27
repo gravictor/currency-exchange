@@ -1,8 +1,5 @@
-import {Component, HostBinding, OnInit} from "@angular/core";
-import {Store} from "@ngrx/store";
-import {GetPairDataAction} from "../../store/currency.actions";
-import {getPairData} from "../../store/currency.selectors";
-import {CurrencyType} from "../../models/currency.model";
+import {Component, HostBinding} from "@angular/core";
+import {CurrencyPair, CurrencyType} from "../../models/currency.model";
 
 @Component({
     selector: 'ce-header',
@@ -13,4 +10,8 @@ export class CeHeaderComponent  {
   @HostBinding('class.ce-header')
   hostClass: boolean = true;
 
+  exchangeRatePair: CurrencyPair[] = [
+      {fromCurrency: CurrencyType.USD, toCurrency: CurrencyType.UAH},
+      {fromCurrency: CurrencyType.EUR, toCurrency: CurrencyType.UAH},
+  ];
 }

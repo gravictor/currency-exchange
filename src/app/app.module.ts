@@ -13,11 +13,13 @@ import {
     currencyStateKey,
     getCurrencyReducers
 } from "./store/currency.reducer";
+import {CeExchangeRateComponent} from "./components/exchange-rate/exchange-rate.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CeHeaderComponent,
+      AppComponent,
+      CeHeaderComponent,
+      CeExchangeRateComponent,
   ],
     imports: [
         BrowserModule,

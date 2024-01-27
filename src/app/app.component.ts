@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {GetPairDataAction} from "./store/currency.actions";
 import {CurrencyType} from "./models/currency.model";
@@ -8,13 +8,11 @@ import {CurrencyType} from "./models/currency.model";
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-    title = 'currency-exchange';
-    constructor(private store: Store<{ currency: any }>) {}
+export class AppComponent implements OnInit {
+    constructor(private store: Store) {}
+     currenciesToFetch: CurrencyType[] = [CurrencyType.EUR, CurrencyType.USD];
 
     ngOnInit(): void {
-        this.store.dispatch(new GetPairDataAction(CurrencyType.UAH));
-        this.store.dispatch(new GetPairDataAction(CurrencyType.EUR));
-        this.store.dispatch(new GetPairDataAction(CurrencyType.USD));
+        this.store.dispatch(new GetPairDataAction(this.currenciesToFetch));
     }
 }

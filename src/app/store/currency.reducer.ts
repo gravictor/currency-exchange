@@ -8,8 +8,9 @@ export interface CurrencyState {
 
 export interface CurrencyModel {
     pairs: {
-        [key: string]: any
-    }
+        [key: string]: any;
+    };
+    loading: boolean;
 }
 
 export const currencyStateKey = 'currency';
@@ -24,6 +25,7 @@ export const getCurrencyState = createFeatureSelector<CurrencyState>(currencySta
 
 export const CURRENCY_INITIAL_STATE: CurrencyModel = {
     pairs: {},
+    loading: false,
 };
 
 @Injectable()
@@ -39,15 +41,22 @@ export class CurrencyReducerService {
         action: CurrencyActions
     ): CurrencyModel {
         switch (action.type) {
-            case CurrencyActionType.GET_PAIR_DATA_SUCCESS: {
-                console.log(action.response.data)
+            case CurrencyActionType.GET_PAIR_DATA: {
                 return {
                     ...state,
-                    pairs: {
-                        ...state.pairs,
-                        [action.baseCurrency]: action.response.data
-                    }
+                }
+            }
+            case CurrencyActionType.GET_PAIR_DATA_SUCCESS: {
+                return {
+                    ...state,
+                    pairs: action.response,
                 };
+            }
+            case CurrencyActionType.SET_LOADING: {
+                return {
+                    ...state,
+                    loading: action.isLoading
+                }
             }
             default:
                 return state;
