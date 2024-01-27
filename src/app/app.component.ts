@@ -10,7 +10,7 @@ import {CurrencyType} from "./models/currency.model";
 })
 export class AppComponent implements OnInit {
     constructor(private store: Store) {}
-     currenciesToFetch: CurrencyType[] = [CurrencyType.EUR, CurrencyType.USD];
+     currenciesToFetch: CurrencyType[] = [CurrencyType.UAH, CurrencyType.EUR, CurrencyType.USD];
 
     ngOnInit(): void {
         this.store.dispatch(new GetPairDataAction(this.currenciesToFetch));

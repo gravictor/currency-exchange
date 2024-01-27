@@ -9,7 +9,7 @@ export interface CurrencyPairModelResponse {
 
 export interface CurrencyData {
     code: string;
-    value: string;
+    value: number;
 }
 
 export interface CurrencyPair {

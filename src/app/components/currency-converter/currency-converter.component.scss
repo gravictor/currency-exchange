@@ -1,0 +1,29 @@
+.ce-currency-converter {
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__converter {
+        background-color: #ffffff;
+        border: 1px solid #bdc3c7;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 70%;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 10% 0;
+    }
+
+    &__pair {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
