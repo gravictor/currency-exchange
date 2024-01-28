@@ -1,12 +1,12 @@
 <ng-container *ngIf="!(loading$ | async); else loadingTemplate">
     <ng-container *ngIf="(pairData$ | async) as pairData; else loadingTemplate">
-        <div class="ce-exchange-rate__pair">Курс {{currencyPair.fromCurrency}}/{{currencyPair.toCurrency}}</div>
+        <div class="ce-exchange-rate__pair">{{currencyPair.fromCurrency}}/{{currencyPair.toCurrency}}</div>
         <div class="ce-exchange-rate__value">{{pairData.value | number:'1.2-2'}}</div>
     </ng-container>
 </ng-container>
 
 <ng-template #loadingTemplate>
-    <div class="ce-exchange-rate__pair">Курс {{currencyPair.fromCurrency}}/{{currencyPair.toCurrency}}</div>
+    <div class="ce-exchange-rate__pair">{{currencyPair.fromCurrency}}/{{currencyPair.toCurrency}}</div>
     <div class="ce-exchange-rate__value-skeleton"></div>
 </ng-template>
 

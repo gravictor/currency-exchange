@@ -75,4 +75,8 @@ export class CeCurrencyConverterComponent {
             });
         }
     }
+
+    private calculate() {
+        // todo: refactor onchanges
+    }
 }

@@ -1,37 +1,22 @@
 .ce-exchange-rate {
-    background-color: #ecf0f1;
-    border: 1px solid #bdc3c7;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    max-width: 200px;
-    color: #2c3e50;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
 
     &__pair {
-        background-color: #3498db;
-        color: #ffffff;
-        font-weight: bold;
-        margin: 0;
-        padding: 10px;
+        margin-right: 8px;
     }
-
     &__value {
-        color: #2ecc71;
-        font-size: 1.5em;
-        margin: 10px;
-
         &-skeleton {
             width: 60px;
-            height: 20px;
+            height: 10px;
             background: linear-gradient(90deg, #ecf0f1, #bdc3c7, #ecf0f1);
             background-size: 200% 100%;
             animation: pulse 1.5s infinite;
-            margin: 15px 10px;
         }
     }
 }

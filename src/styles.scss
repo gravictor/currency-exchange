@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: linear-gradient(180deg, #121E2C 0%, #D1E6FF 100%);}
 
 @import './app/components/header/header.component.scss';
 @import './app/components/exchange-rate/exchange-rate.component.scss';

@@ -1,10 +1,9 @@
 <div class="ce-currency-converter__converter">
     <div class="ce-currency-converter__wrapper">
         <div class="ce-currency-converter__pair">
-
             <mat-form-field>
                 <mat-label>Количество</mat-label>
-                <input matInput [(ngModel)]="firstCurrencyAmount" placeholder="Amount" (input)="select1()">
+                <input type="number" matInput [(ngModel)]="firstCurrencyAmount" placeholder="Amount" (input)="select1()">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Валюта</mat-label>
@@ -15,13 +14,13 @@
                 </mat-select>
             </mat-form-field>
         </div>
+
         <mat-icon>swap_horizontal_circle</mat-icon>
 
         <div class="ce-currency-converter__pair">
-
             <mat-form-field>
                 <mat-label>Количество</mat-label>
-                <input matInput [(ngModel)]="secondCurrencyAmount" placeholder="Amount" (input)="select2()">
+                <input type="number" matInput [(ngModel)]="secondCurrencyAmount" placeholder="Amount" (input)="select2()">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Валюта</mat-label>

@@ -5,7 +5,7 @@ import {CurrencyActions, CurrencyActionType} from "./currency.actions";
 export interface CurrencyState {
     data: CurrencyModel;
 }
-
+//todo: use interface
 export interface CurrencyModel {
     pairs: {
         [key: string]: any;

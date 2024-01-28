@@ -8,7 +8,7 @@ import {CurrencyPairModelResponse, CurrencyType} from "../models/currency.model"
 })
 export class CurrencyService {
     private apiUrl = 'https://api.currencyapi.com/';
-    private apiKey = 'cur_live_FNffaK8h66o5uShu0Eh0NiUVnhroBxSOMc1jkD7j';
+    private apiKey = 'cur_live_Gk3YKJ4cebovWnWzTZJTVfPPxYtCWtXLP0bBobnP';
 
     constructor(private http: HttpClient) { }
 

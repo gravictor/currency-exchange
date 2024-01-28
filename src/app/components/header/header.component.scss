@@ -2,21 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #3498db, #2ecc71);
-    height: 150px;
-    color: #ffffff;
+    background: #121E2C;
+    height: 10%;
+    color: white;
     padding: 0 10%;
 
     &__title {
-        font-size: 1.5em;
-        font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 0;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
     }
 
     &__pairs {
         display: flex;
-        gap: 10px;
+        flex-direction: column;
     }
 }
