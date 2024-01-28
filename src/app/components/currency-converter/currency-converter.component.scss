@@ -21,6 +21,12 @@
         margin-top: 50px;
     }
 
+    &__swap-icon {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &__pair {
         display: flex;
         align-items: center;

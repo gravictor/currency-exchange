@@ -15,6 +15,8 @@ export class CeCurrencyConverterComponent {
 
     @Input() currencies: CurrencyType[];
 
+    isSwapped: boolean = false;
+
     firstCurrencyAmount: number;
     firstSelectedCurrency: CurrencyType;
 
@@ -22,6 +24,15 @@ export class CeCurrencyConverterComponent {
     secondSelectedCurrency: CurrencyType;
 
     constructor(private store$: Store) {
+    }
+
+    swap(): void {
+        const tempCurrency = this.firstSelectedCurrency;
+
+        this.isSwapped = !this.isSwapped;
+        this.firstSelectedCurrency = this.secondSelectedCurrency;
+        this.secondSelectedCurrency = tempCurrency;
+        this.convertCurrency1ToCurrency2(this.firstSelectedCurrency);
     }
 
     convertCurrency1ToCurrency2(event: CurrencyType): void {
